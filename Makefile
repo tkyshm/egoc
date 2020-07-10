@@ -1,7 +1,6 @@
 .PHONY: elvis test dialyzer start
 
 TAG ?= $(shell git log --format=%h -n 1)
-APP_NAME := pipeflow
 
 elvis:
 	elvis --config elvis.config
