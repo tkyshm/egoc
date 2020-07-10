@@ -1,5 +1,5 @@
 {application, egoc,
- [{description, "An OTP application"},
+ [{description, "Google's OAuth2 Token Library"},
   {vsn, "0.1.0"},
   {registered, []},
   {mod, {egoc, []}},
@@ -11,7 +11,7 @@
   {env,[]},
   {modules, []},
 
-  {maintainers, []},
+  {maintainers, ["Takuya Yoshimura"]},
   {licenses, ["Apache 2.0"]},
-  {links, []}
+  {links, [{"Github", "https://github.com/tkyshm/egoc"}]}
  ]}.
