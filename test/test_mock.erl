@@ -21,13 +21,12 @@ init(Req0, Opts) ->
 	Method = cowboy_req:method(Req0),
 	_HasBody = cowboy_req:has_body(Req0),
     Path = cowboy_req:path(Req0),
-    logger:info("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP ~p",[Path]),
 	{ok, handle_req(Method, Path, Req0, Opts), Opts}.
 
-handle_req(<<"POST">>, <<"/oauth2/v4/token">>, Req, Opts) -> 
+handle_req(<<"POST">>, <<"/oauth2/v4/token">>, Req, Opts) ->
     cowboy_req:reply(200, ?RESP_HEADERS, make_test_resp(Opts), Req);
 
-handle_req(<<"GET">>, <<"/computeMetadata/v1/instance/service-accounts/default/token">>, Req, Opts) -> 
+handle_req(<<"GET">>, <<"/computeMetadata/v1/instance/service-accounts/default/token">>, Req, Opts) ->
     cowboy_req:reply(200, ?RESP_HEADERS, make_test_resp(Opts), Req).
 
 make_test_resp([Opts]) ->
