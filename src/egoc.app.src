@@ -1,6 +1,6 @@
 {application, egoc,
  [{description, "Google's OAuth2 Token Library"},
-  {vsn, "0.1.0"},
+  {vsn, "0.1.1"},
   {registered, []},
   {mod, {egoc, []}},
   {applications,
